@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password:
+  password: <%= ENV['STOCKPILE_DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: stockpile_production
-  username: stockpile
+  username: root
   password: <%= ENV['STOCKPILE_DATABASE_PASSWORD'] %>
