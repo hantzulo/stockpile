@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+gem 'cancan'
+
