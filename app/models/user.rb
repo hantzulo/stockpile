@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   # User::Roles
   # The available roles
-  Roles = [ :admin , :warehouse ]
+  #Roles = [ :admin , :warehouse ]
 
   def is?( requested_role )
     self.role == requested_role.to_s

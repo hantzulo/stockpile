@@ -9,9 +9,12 @@ class Ability
     # Define User abilities
     if user.is? :admin
       can :manage, :all
-    else
+    elsif user.is? :warehouse
       can :read, :all
-    end
+      can :update, :all
+      cannot :manage, User
+
+          end
 
     # Define abilities for the passed in user here. For example:
     #
